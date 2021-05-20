@@ -1,14 +1,22 @@
 #!/usr/bin/env python
 
 """
-This script is designed to run for the Impressionist Painters classification assignment. It calls a number of functions from the 
-CNN_utils.py script (found in the utils folder) and denotes the LeNet model architechture here, as that is the focus of the assignment. The script has a number of argparse functions which can be emmended to change the directory of the train and test set as well as the number of epochs, however none of these are necessary for the file to run. 
-Need to mention the functions used in this scrip can be found in the utils package
+This script builds a LeNet Convolutional Neural Network (CNN) to predict which artist a painting belongs to within a collection of 10 impressionist painters. 
 
-The Model used in this script is the LeNet model which takes the following layer architecture: 
+The script tries to structure the code in such a way that it is built to run for this context of impressionist paintings, but could be easily adapted into a new context. 
+To support this process, a number of the functions have been stored in the CNN_utils.py script, found in the utils folder. 
 
-INPUT => CONV => ReLU => MAXPOOL => CONV => ReLU => MAXPOOL => FC => ReLU => FC
+The script therefore calls many of the functions to be run here, but keeps the focus of the script on building the model. 
 
+Parameters: 
+  -t  --path2train:  <str> "Path to where the training data is stored" 
+  -te --path2test:   <str> "Path to where the validation data is stored" 
+  -n  --n_epochs:    <int> "Number of epochs to train the model on" 
+  -b  --batch_size:  <int> "The size of the batch to train the model on"
+  
+Usage: 
+
+$ python3 src/CNN_artists.py 
 
 """ 
 
@@ -240,7 +248,7 @@ def define_LeNet_model(min_width, min_height):
                            strides=(2, 2))) # stride of 2 horizontal, 2 vertical
     
     # Add second convolutional layer, ReLu activation function, and pooling layer
-    # Convolutional layer
+    # Convolutional layer (5x5 kernal)
     model.add(Conv2D(50, (5, 5), 
                      padding="same"))
     
