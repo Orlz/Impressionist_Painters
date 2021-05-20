@@ -1,5 +1,7 @@
-Alt-Classifying Impressionist Paintings 
-====
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![describtor - e.g. python version](https://img.shields.io/badge/Python%20Version->=3.6-blue)](www.desired_reference.com)   ![](https://img.shields.io/badge/Software%20Mac->=10.14-pink)
+
+# Classifying Impressionist Paintings 
+
 
 ## Using a Convolutional Neural Network (CNN) with Tensorflow
 
@@ -23,8 +25,8 @@ We chose to use the LeNet model achitecture.
 
 
 
-Alt-Scripts and Data
----
+## Scripts and Data
+
 
 __Data__
 
@@ -39,8 +41,8 @@ There is just one script to be used in this assignment which can be found in the
 There is also a CNN utility script found in the utils folder which contains a number of functions which can be used iteratievly for other CNN's. The decision to include all but the model's function in the utility script was to create a respository and script which could be easily generalised to new contexts. I build upon this in the next assignment. 
 
 
-Alt-Methods 
----
+## Methods 
+
 
 This problem relates to classifying complex colour images into their respective artist category. The methodological approach took a three-fold approach: 
 1. Pre-process the image data 
@@ -56,8 +58,8 @@ The model was then trained on the full dataset with 20 epochs and a batch size o
 
 
 
-Alt-Operating the Scripts
----
+## Operating the Scripts
+
 
 There are 3 steps to take to get your script up and running:
 1. Clone the repository 
@@ -118,8 +120,7 @@ python3 src/CNN_artists.py n_epochs 15
 ```
 
 
-Alt-Evaluation of Results 
-----
+## Evaluation of Results 
 
 The model's history plot, found in the 'out' folder, indicates that our model is learning quite rapidly up until around 12 epochs. This is demonstrated by the falling blue train_loss curve and growing yellow training accuracy curve. At this point of 12 epochs, both curves begin to flatten and by 15 epochs it appears that the model’s learning has plateaued, suggesting the model does not need to run for further epochs. At the same time, the validation curves indicate the model is not generalising particularly well, with the validation loss curve initially falling but then rapidly rising after around 6 epochs (red). The almost flat validation accuracy curve indicates that the model cannot really manage unseen data with more training any better than it does at the beginning. This suggests that the learning trends seen are likely to be a case of over fitting, i.e., following the errors and trends in the training data too closely. Indeed, our two loss curves end at opposite ends of the plot – suggesting that there is much improvement we could make to the model! 
 
