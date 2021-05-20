@@ -99,13 +99,15 @@ There script contains a number of command-line parameters which can be set by th
 
 
 ___Parameter options = 4___
+```
 
-| Letter call   | Are             | Required?| Input Type   | Description
+| Letter call   | Parameter       | Required?| Input Type   | Description
 | ------------- |:-------------:  |:--------:|:-------------:
 |`-t`           | `--path2train`  | No       | String       | Path to the training directory (default: ../data/training)   | 
 |`-te`          | `--path2test`   | No       | String       | Path to the validation directory (default:../data/validation)|
 |`-n`           | `--n_epochs`    | No       | Integer      | Number of epochs to train model on (default: 20)             |
 |`-b`           | `--batch_size`  | No       | Integer      | The batch size on which to train the data on (default: 32)   |
+```
 
 
 Below is an example of the command line arguments for 15 epochs instead of the default:
