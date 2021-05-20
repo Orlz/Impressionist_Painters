@@ -72,7 +72,7 @@ The easiest way to access the files is to clone the repository from the command 
 
 ```bash
 #clone repository as classification_benchmarks_orlz
-git clone https://github.com/Orlz/CDS_Visual_Analytics.git classification_benchmarks_orlz
+git clone https://github.com/Orlz/Impressionist_Painters.git
 
 ```
 
