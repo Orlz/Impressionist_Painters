@@ -41,7 +41,7 @@ import glob
 from contextlib import redirect_stdout
 
 #Functions from the utils folder
-import utils.CNN_utils as functions
+import Impressionist_Painters.utils.CNN_utils as functions
 
 #Commandline functionality 
 import argparse
